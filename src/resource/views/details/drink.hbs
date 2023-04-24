@@ -1,0 +1,77 @@
+<style>
+  body {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>
+<div class="container">
+  <table class="table table-striped table-bordered table-hover animated-bg">
+    <thead class="thead-dark">
+ 
+      <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+         {{#each dish}}
+      <tr>
+        <td><b>Mã món ăn</b></td>
+        <td>{{this.MaMon}}</td>
+      </tr>
+      <tr>
+        <td><b>Tên món ăn </b></td>
+        <td>{{this.TenMon}}</td>
+      </tr>
+      <tr>
+        <td><b>Hình ảnh </b></td>
+        <td>{{this.Hinh}}</td>
+      </tr>
+      <tr>
+        <td><b>Nhóm </b></td>
+        <td>{{this.MaNhom}}</td>
+      </tr>
+      <tr>
+        <td><b>Size & Đơn giá </b></td>
+        <td>
+            {{#each ../sizeAndPrice}}
+           {{this.Size}} : {{this.DonGia}}vnđ  <br>
+            {{/each}} 
+        </td>
+      </tr>
+          {{#each ../orderInMonth}}
+      <tr>
+        <td><b>Số lượng đặt trong tháng </b></td>
+        <td>{{this.sum}}</td>
+      </tr>
+           {{/each}}
+        {{/each}}
+      <!-- Add more rows here as needed -->
+    </tbody>
+  </table>
+</div>
+
+
+{{!-- {{each food}}
+<h1>{{this.TenMon}}</h1>
+{{/each}} --}}
+{{!-- 
+{{#each data1}}
+<h1>{{this.title}}</h1>
+<h1>{{this.content}}</h1>
+
+{{#each ../data2}}
+<h1>{{this.isAdmin}}</h1>
+{{/each}}
+
+{{/each}} --}}
+

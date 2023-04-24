@@ -1,0 +1,33 @@
+<style>
+  #hi {
+    background: linear-gradient(to right, #f8cfd1, #e7a2a2, #d85d7d, #c81e49);
+  }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>
+<div class="mt-4" id="hi">
+  <div class="row">
+
+    {{#each courses}}
+      <div class="col-sm-6 col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{this.Hinh}}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{this.TenMon}}</h5>
+            <p class="card-text">Some quick example text to build on the card
+              title and make up the bulk of the card's content.</p>
+            <a href="/{{this.MaMon}}/detail" class="btn btn-primary">Get Details</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

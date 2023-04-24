@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logged In Successfully</title>
+	<style>
+		
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			background-image: url('https://i.pinimg.com/originals/52/2e/0c/522e0ce4f76271fa6a314e9dc3aa37f1.gif');
+			background-size: cover;
+			background-position: center;
+			animation: bg-animation 30s linear infinite alternate;
+		}
+		.container {
+			width: 400px;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			opacity: 0;
+			animation: fade-in 0.5s ease-out forwards;
+		}
+		h1 {
+			color: red;
+			font-size: 2em;
+			margin-top: 0;
+			text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+		}
+		p {
+			color: #333;
+			font-size: 1.2em;
+			margin-bottom: 0;
+			line-height: 1.5;
+			text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+		}
+		.button {
+			display: inline-block;
+			padding: 8px 16px;
+			background-color: red;
+			color: #fff;
+			font-size: 1.2em;
+			font-weight: bold;
+			text-decoration: none;
+			border-radius: 5px;
+			box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+			transition: background-color 0.2s ease-out;
+		}
+		.button:hover {
+			background-color: #008000;
+		}
+		@keyframes fade-in {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		@keyframes bg-animation {
+			from { background-position: 0 0; }
+			to { background-position: 20px 20px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Input Error</h1>
+		<p>You need to insert a valid year containing only numbers</p>
+		<a href="/revenue/search" class="button">Continue to Revenue </a>
+	</div>
+</body>
+</html>
