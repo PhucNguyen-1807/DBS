@@ -5,6 +5,7 @@ class MenuController{
     {
         async function menu()
         {
+            console.log(req.body.TenMon);
             var result= await connection.query(QUERY.SELECT_MONAN_TENMON, req.body.TenMon)
             var courses=result[0]
                 res.render('afterSearch',{courses})
