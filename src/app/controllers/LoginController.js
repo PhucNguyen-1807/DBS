@@ -1,4 +1,3 @@
-const { DEFAULT_ENCODING } = require('crypto');
 const jwt = require('jsonwebtoken');
 const path=require('path')
 const accConnection = require("../../config/db/account.js");
